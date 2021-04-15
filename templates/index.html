@@ -2,6 +2,9 @@
 
 {% load static %}
 
+<a href="{% url 'blog:all_blogs' %}">My Blogs</a>
+<br>
+
 <img src="{% static 'me.jpg' %}">
 
 {% for project in projects %}
