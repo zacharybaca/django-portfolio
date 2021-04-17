@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+
+{% block pagecontent %}
+
 <h1>Welcome To My Blog Page</h1>
 <h2>Zach has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h2>
 {% for blog in blogs %}
@@ -5,3 +9,5 @@
    <h5>{{ blog.date|date:'M d Y'|upper }}</h5>
    <p>{{ blog.bio|striptags|truncatechars:100 }}</p>
 {% endfor %}
+
+{% endblock %}
